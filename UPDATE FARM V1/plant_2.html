@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>UBU Smart Farm - Plant 2</title>
+      <link rel="shortcut icon" href="images/Ubu_logo.ico" />
+      <script type="text/javascript "src="/socket.io/socket.io.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+     
+    <meta charset="utf-8">
+    
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body style="background-color: #ffffff;">
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+				<div class="p-4">
+                <img src="images/Ubu_logo.png" alt="logo" class="img-thumbnail">
+		  		<h1><a href="index.html" class="logo">UBU <span>Smart Farm</span></a></h1>
+	        <ul class="list-unstyled components mb-5">
+	          <li >
+	            <a href="/index.html"><span class="fa fa-home mr-3"></span> Home</a>
+	          </li>
+	          <li  >
+	              <a href="/plant_1.html"><span class="fa fa-sticky-note mr-3"></span> Plant 1</a>
+	          </li>
+	          <li class="active">
+              <a href="/plant_2.html"><span class="fa fa-sticky-note mr-3"></span> Plant 2</a>
+	          </li>
+	          <li>
+              <a href="/plant_3.html"><span class="fa fa-sticky-note mr-3"></span> Plant 3</a>
+	          </li>
+	          <li>
+              <a href="#"><span class="fa fa-suitcase mr-3"></span> Services</a>
+	          </li>
+	          <li>
+              <a href="#"><span class="fa fa-cogs mr-3"></span> Setting</a>
+	          </li>
+	          <li>
+              <a href="contact.html"><span class="fa fa-paper-plane mr-3"></span> Contacts</a>
+	          </li>
+	        </ul>
+
+	        <div class="mb-5">
+						<h3 class="h6 mb-3">Subscribe for newsletter</h3>
+						<form action="#" class="subscribe-form">
+	            <div class="form-group d-flex">
+	            	<div class="icon"><span class="icon-paper-plane"></span></div>
+	              <input type="text" class="form-control" placeholder="Enter Email Address">
+	            </div>
+	          </form>
+					</div>
+
+	        <div class="footer">
+            
+	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5" >
+        <h2 style="">Plant 2</h2>
+      <div class="myBody">
+        
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin: 20px 20px;">
+
+             <!--  <label class="btn btn-secondary" >   -->
+              <label class="btn btn-success" id="option1_plant_2" >
+              <input type="radio" name="options"  autocomplete="off" > Manaul
+            </label>
+            <!--  <label class="btn btn-secondary" >   -->
+            <label class="btn btn-success" id="option2_plant_2">
+              <input type="radio" name="options"  autocomplete="off" > Auto
+            </label>           
+          </div>
+          
+
+          <div class="row" style="column-gap: 15px; ">
+            <div class="col-9" style="background-color: #ffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                          
+                <img src="images/farm.png" class="img-fluid" style="margin-top: 20px;" alt="Responsive image">
+                <div class="row" style="text-align: center;margin-top: 20px; height: 180px;">
+                    <div class="col"><p class="font-weight-bold">Water Pump</p>
+                        <img src="images/pump.jpg" class="rounded mx-auto d-block" alt="..." style="margin-top: 5px;">
+                        <input id="pump_check_plant_2" onclick="myFunction()" type="checkbox" checked data-toggle="toggle" data-onstyle="success" >
+                        
+                    </div>
+                    <div class="col"><p class="font-weight-bold">Vavle  1</p>
+                        <img src="images/valve.jpg" class="rounded mx-auto d-block" alt="..."style="margin-top: 5px;">
+                        <input id="valve_1_check_plant_2" type="checkbox" checked data-toggle="toggle" data-onstyle="success">
+                    </div>
+                    <div class="col"><p class="font-weight-bold">Vavle  2</p>
+                        <img src="images/valve.jpg" class="rounded mx-auto d-block" alt="..."style="margin-top: 5px;">
+                        <input id="valve_2_check_plant_2" type="checkbox" checked data-toggle="toggle" data-onstyle="success">
+                    </div>
+                   
+                   
+                  </div>
+                </div>
+         
+            
+
+
+            <div class="col-2" style="background-color: #ffff;text-align: center;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <p class="font-weight-bold" ><u>Enviroment(Air)</u></p>
+
+                
+                <p><canvas id="myChart_temp_plant_2" width="180" height="180"></canvas></p>
+                <p><canvas id="myChart_humi_plant_2" width="180" height="180"></canvas></p>
+                                
+                <script src="js/air_in_plant_2.js"></script>
+
+            </div>
+          </div>
+       
+
+          <div class="row" style="text-align: center;margin-top: 20px; height: 230px;">
+            <div class="col-9" style="background-color: #ffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              <h2 style="margin-top: 20px;">Temperature and Humidity</h2>
+
+                <canvas  id="chart_plant_2" width="700" height="380"></canvas>
+              <h2 style="margin-top: 20px;">Inverter speed</h2>
+                <canvas  id="InverterChart" width="700" height="300"></canvas>
+
+            </div>
+            <div class="col-2" style="margin-left: 14px; background-color: #ffff;text-align: center;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              <p class="font-weight-bold" ><u>Enviroment(Water)</u></p>              
+              <p><canvas id="myChart_ph" width="180" height="180"></canvas></p>
+              <p><canvas id="myChart_ec" width="180" height="180"></canvas></p>
+              
+          </div>         
+          </div>
+
+        
+            
+    
+    </div>
+    <div>
+
+
+    <script src="js/tempChart_plant_2.js"></script>
+    <script src="js/inverterChart.js"></script>
+		<script src="js/enveromentWater.js"></script>
+    <script src="js/switchEmit_plant_2.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+  </body>
+</html>
